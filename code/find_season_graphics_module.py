@@ -1,3 +1,6 @@
+from PIL import Image
+
+
 # Function to print graphics output based on season
 def find_season_graphics(country, month):
     # Define the file paths for each season image
@@ -15,7 +18,7 @@ def find_season_graphics(country, month):
             "september": ["../documents/ISEimages/spring.png", "../documents/ISEimages/djilba.png"],
             "october": ["../documents/ISEimages/spring.png", "../documents/ISEimages/kambarang.png"],
             "november": ["../documents/ISEimages/spring.png", "../documents/ISEimages/kambarang.png"]
-        }
+        },
         "spain": {
             "december": "../documents/ISEimages/winter.png",
             "january": "../documents/ISEimages/winter.png",
@@ -96,6 +99,13 @@ def find_season_graphics(country, month):
     # Check if the country and month have a corresponding season image
     if country in season_images and month in season_images[country]:
         image_path = season_images[country][month]
-        return image_path
+        if country == 'australia':
+            image = Image.open(image_path[0])
+            image.show(title='Meteorogical season')
+            image = Image.open(image_path[1])
+            image.show(title='Noongar season')
+        else:
+            image = Image.open(image_path)
+            image.show(title='Meteorogical season')
     else:
-        return 'Invalid Input'
+        print(f'Invalid Input or data not available for the given country and month.')

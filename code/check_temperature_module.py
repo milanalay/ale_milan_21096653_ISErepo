@@ -21,10 +21,10 @@ def check_temperature(city, time, temperature):
         average_temp = average_temperatures[city][time]
         difference = temperature - average_temp
         if difference > 5:
-            return f"The temperature in {city} {time} is {temperature}°C, which is {difference}°C above the average."
+            print(f"The temperature in {city} {time} is {temperature}°C, which is {difference}°C above the average temperature.")
         elif difference < -5:
-            return f"The temperature in {city} {time} is {temperature}°C, which is {abs(difference)}°C below the average."
+            print(f"The temperature in {city} {time} is {temperature}°C, which is {abs(difference)}°C below the average temperature.")
         else:
-            return f"The temperature in {city} {time} is {temperature}°C, which is around the average."
+            print(f"The temperature in {city} {time} is {temperature}°C, which is around the average temperature.")
     else:
-        return "Invalid input or data not available for the given city and time."
+        print(f"Invalid input or data not available for the given city and time.")

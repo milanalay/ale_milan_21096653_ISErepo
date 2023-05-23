@@ -91,9 +91,13 @@ def find_season(country, month):
     # Convert the country and month to lowercase to handle case-insensitivity
     country = country.lower()
     month = month.lower()
-
+    
     # Check if the country and month are in the seasons dictionary
     if country in seasons and month in seasons[country]:
-        return seasons[country][month]
+        season = seasons[country][month]
+        if country == 'australia':
+            print(f"The Meteorological season in '{country}' for the month of '{month}' is '{season[0]}' and the Noongar season is '{season[1]}'.")
+        else:
+            print(f"The season in '{country}' for the month of '{month}' is '{season}'.")
     else:
-        return 'Invalid Input'
+        print(f'Invalid input or data not available for the given country and month.')
