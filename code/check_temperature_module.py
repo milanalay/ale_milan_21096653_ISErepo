@@ -9,7 +9,7 @@ def check_temperature(city, time, temperature):
         "adelaide": {
             "morning": 23,
             "evening": 21
-        }
+        }  
     }
 
     # Convert the city and time to lowercase to handle case-insensitivity
@@ -17,14 +17,20 @@ def check_temperature(city, time, temperature):
     time = time.lower()
 
     # Check if the city and time are in the average_temperatures dictionary
-    if city in average_temperatures and time in average_temperatures[city]:
+    if city in average_temperatures and time in average_temperatures[city] and temperature:
         average_temp = average_temperatures[city][time]
-        difference = temperature - average_temp
-        if difference > 5:
-            print(f"The temperature in {city} {time} is {temperature}°C, which is {difference}°C above the average temperature.")
-        elif difference < -5:
-            print(f"The temperature in {city} {time} is {temperature}°C, which is {abs(difference)}°C below the average temperature.")
+        difference = round(float(temperature) - average_temp, 2)
+        if float(temperature) > average_temp:
+            if difference > 5:
+                message = f"The temperature in {city} {time} is {temperature}°C, which is {difference}°C above the average temperature."
+                return message
+            else:
+                result1 = f"Above"
+                return result1
         else:
-            print(f"The temperature in {city} {time} is {temperature}°C, which is around the average temperature.")
+            result2 = f"Below"
+            return result2
     else:
-        print(f"Invalid input or data not available for the given city and time.")
+        result = f"Not found"
+        return result
+        

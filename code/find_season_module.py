@@ -4,7 +4,7 @@ def find_season(country, month):
         "australia": {
             "december": ["Summer", "Birak"],
             "january": ["Summer", "Birak"],
-            "feburary": ["Summer", "Bunuru"],
+            "february": ["Summer", "Bunuru"],
             "march": ["Autumn", "Bunuru"],
             "april": ["Autumn", "Djeran"],
             "may": ["Autumn", "Djeran"],
@@ -15,10 +15,38 @@ def find_season(country, month):
             "october": ["Spring", "Kambarabg"],
             "november": ["Spring", "Kambarabg"]
         },
+        # "australia": {
+        #     "december": "Summer",
+        #     "january": "Summer",
+        #     "february": "Summer",
+        #     "march": "Autumn",
+        #     "april": "Autumn",
+        #     "may": "Autumn",
+        #     "june": "Winter",
+        #     "july": "Winter",
+        #     "august": "Winter",
+        #     "september": "Spring",
+        #     "october": "Spring",
+        #     "november": "Spring"
+        # },
+        # "australia": {
+        #     "december": "Birak",
+        #     "january": "Birak",
+        #     "february": "Bunuru",
+        #     "march": "Bunuru",
+        #     "april": "Djeran",
+        #     "may": "Djeran",
+        #     "june": "Makuru",
+        #     "july": "Makuru",
+        #     "august": "Dijiba",
+        #     "september": "Dijiba",
+        #     "october": "Kambarabg",
+        #     "november": "Kambarabg"
+        # },
         "spain": {
             "december": "Winter",
             "january": "Winter",
-            "feburary": "Winter",
+            "february": "Winter",
             "march": "Spring",
             "april": "Spring",
             "may": "Spring",
@@ -32,7 +60,7 @@ def find_season(country, month):
         "japan": {
             "december": "Winter",
             "january": "Winter",
-            "feburary": "Winter",
+            "february": "Winter",
             "march": "Spring",
             "april": "Spring",
             "may": "Spring",
@@ -47,7 +75,7 @@ def find_season(country, month):
             "november": "Summer",
             "december": "Summer",
             "january": "Summer",
-            "feburary": "Summer",
+            "february": "Summer",
             "march": "Summer",
             "april": "Summer",
             "may": "Autumn",
@@ -60,7 +88,7 @@ def find_season(country, month):
         "malaysia": {
             "december": "Northeast Monsoon",
             "january": "Northeast Monsoon",
-            "feburary": "Northeast Monsoon",
+            "february": "Northeast Monsoon",
             "march": "Inter-monsoon",
             "april": "Inter-monsoon",
             "may": "Southeast Monsoon",
@@ -74,7 +102,7 @@ def find_season(country, month):
         "sri lanka": {
             "december": "Northeast Monsoon",
             "january": "Northeast Monsoon",
-            "feburary": "Northeast Monsoon",
+            "february": "Northeast Monsoon",
             "march": "Inter-monsoon",
             "april": "Inter-monsoon",
             "may": "Southeast Monsoon",
@@ -95,9 +123,7 @@ def find_season(country, month):
     # Check if the country and month are in the seasons dictionary
     if country in seasons and month in seasons[country]:
         season = seasons[country][month]
-        if country == 'australia':
-            print(f"The Meteorological season in '{country}' for the month of '{month}' is '{season[0]}' and the Noongar season is '{season[1]}'.")
-        else:
-            print(f"The season in '{country}' for the month of '{month}' is '{season}'.")
+        return season
     else:
-        print(f'Invalid input or data not available for the given country and month.')
+        invalid = f"Not found"
+        return invalid

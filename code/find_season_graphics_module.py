@@ -108,4 +108,5 @@ def find_season_graphics(country, month):
             image = Image.open(image_path)
             image.show(title='Meteorogical season')
     else:
-        print(f'Invalid Input or data not available for the given country and month.')
+        return None
+#         print(f'Invalid Input or data not available for the given country and month.')

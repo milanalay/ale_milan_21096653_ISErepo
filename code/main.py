@@ -9,13 +9,15 @@ if __name__ == "__main__":
     if choice == 'season':
         country = input("Enter the country name: ")
         month = input("Enter the month: ")
-        find_season_module.find_season(country, month)
+        season = find_season_module.find_season(country, month)
+        print(season)
         find_season_graphics_module.find_season_graphics(country, month)
     elif choice == 'temperature':
         city = input("Enter the city (Perth or Adelaide): ")
         time = input("Enter the time (Morning or Evening): ")
-        temperature = float(input("Enter the temperature: "))
-        check_temperature_module.check_temperature(city, time, temperature)
+        temperature = input("Enter the temperature: ")
+        result = check_temperature_module.check_temperature(city, time, temperature)
+        print(result)
     else:
         print('Invalid Input') 
 
