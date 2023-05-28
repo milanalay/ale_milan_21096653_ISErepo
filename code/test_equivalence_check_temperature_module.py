@@ -34,7 +34,8 @@ def test_check_temperature():
     assert 'Below' == check_temperature_module.check_temperature('perth', 'evening', 15)
 
     # Test case for Invalid Data
-    assert 'Not found' == check_temperature_module.check_temperature('sydney', 'evening', 25)
+    # follows name of a country wish to visit, last name as appear in the ID, last four digits of student ID
+    assert 'Not found' == check_temperature_module.check_temperature('norway', 'ale', 6653)
     assert 'Not found' == check_temperature_module.check_temperature('perth', 'afternoon', 25)
     assert 'Not found' == check_temperature_module.check_temperature('adelaide', 'morning', '')
 

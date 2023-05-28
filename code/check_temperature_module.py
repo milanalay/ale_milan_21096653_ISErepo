@@ -19,7 +19,7 @@ def check_temperature(city, time, temperature):
     # Check if the city and time are in the average_temperatures dictionary
     if city in average_temperatures and time in average_temperatures[city] and temperature:
         average_temp = average_temperatures[city][time]
-        difference = round(float(temperature) - average_temp, 2)
+        difference = float(temperature) - average_temp
         if float(temperature) > average_temp:
             if difference > 5:
                 message = f"The temperature in {city} {time} is {temperature}°C, which is {difference}°C above the average temperature."

@@ -29,9 +29,9 @@ def test_find_season():
     assert 'Not found' == find_season_module.find_season('', 'july')
     assert 'Not found' == find_season_module.find_season('japan', '')
 
-    # Invalid Input type
-    assert 'Not found' == find_season_module.find_season('123', 'august')
-    assert 'Not found' == find_season_module.find_season('australia', '9')
+    # Invalid Input type: 6653 is the last four digits of my student ID and ale is my last name
+    assert 'Not found' == find_season_module.find_season('6653', 'ale')
+    assert 'Not found' == find_season_module.find_season('norway', '9')
 
 
 

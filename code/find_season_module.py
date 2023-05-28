@@ -15,34 +15,6 @@ def find_season(country, month):
             "october": ["Spring", "Kambarabg"],
             "november": ["Spring", "Kambarabg"]
         },
-        # "australia": {
-        #     "december": "Summer",
-        #     "january": "Summer",
-        #     "february": "Summer",
-        #     "march": "Autumn",
-        #     "april": "Autumn",
-        #     "may": "Autumn",
-        #     "june": "Winter",
-        #     "july": "Winter",
-        #     "august": "Winter",
-        #     "september": "Spring",
-        #     "october": "Spring",
-        #     "november": "Spring"
-        # },
-        # "australia": {
-        #     "december": "Birak",
-        #     "january": "Birak",
-        #     "february": "Bunuru",
-        #     "march": "Bunuru",
-        #     "april": "Djeran",
-        #     "may": "Djeran",
-        #     "june": "Makuru",
-        #     "july": "Makuru",
-        #     "august": "Dijiba",
-        #     "september": "Dijiba",
-        #     "october": "Kambarabg",
-        #     "november": "Kambarabg"
-        # },
         "spain": {
             "december": "Winter",
             "january": "Winter",
